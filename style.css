@@ -1,0 +1,222 @@
+/* RESET DEFAULT STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: rgb(58,122,180);
+    background: radial-gradient(circle, rgba(58,122,180,1) 0%, rgba(5,6,79,1) 34%, rgba(5,6,8,1) 43%, rgba(145,35,35,1) 75%, rgba(186,190,183,1) 94%);
+}
+
+
+/* NAVBAR STYLES */
+.navbar {
+    background-color: #00000000;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline-flex;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: sans-serif;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: rgb(57, 57, 57);
+    transform: scale(1.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    transition: transform 0.9s ease; /* Smooth transition */
+    display: inline-block;
+}
+
+.logo:hover {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transform: rotate(-9deg);
+}
+
+.footer {
+    margin-top: 150px !important;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* DROPDOWN BUTTON */
+.dropwbtn {
+    background: rgba(225, 151, 151, 0.596);
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.dropwbtn:hover {
+    background: linear-gradient(to right, #5A0000, #8B0000);
+    transform: scale(1.05);
+}
+
+/* DROPDOWN CONTAINER */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* DROPDOWN MENU */
+.dropdown-content {
+    display: none;
+    background-color: rgb(91, 0, 0);
+    position: absolute;
+    min-width: 70px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 20%;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.6s;
+}
+
+.dropdown-content a:hover {
+    background-color: #c4c4c429;
+}
+
+/* SHOW DROPDOWN ON HOVER */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+}
+
+.dropdown:hover .dropwbtn {
+    background: rgb(57, 57, 57);
+}
+
+.block {
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.437);
+    border-radius: 20px;
+    display: flex; /* Makes content align properly */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content inside */
+    justify-content: space-between; /* Evenly distribute space inside */
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+  .container {
+    display: flex; /* Arrange blocks in a row */
+    justify-content: center; /* Center them */
+    gap: 30px; /* Adds spacing between the blocks */
+    flex-wrap: wrap; /* Ensures they wrap on smaller screens */
+    font-family: sans-serif;
+    transition: 0.5s ease;
+    color: white;
+}
+
+  
+.block img {
+   padding-top: 10px; 
+   max-width: 200px;
+   max-height: 230px;
+   border-radius: 20px;
+   transform: none;
+}
+
+.container :hover {
+    background-color: rgb(3, 1, 28);
+    transform: scale(1.05);
+}
+
+.intro {
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Initially hide everything */
+.afterscroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Show only the h1 first */
+.afterscroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Initially hide the paragraphs */
+.afterscroll p {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+}
+
+/* When user scrolls further, paragraphs appear */
+.afterscroll.show-text p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
